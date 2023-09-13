@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Luas dan Keliling Persegi</title>
+    <style>
+        /* Gaya untuk elemen body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Gaya untuk kontainer utama */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: burlywood;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Gaya untuk gambar persegi */
+        .square {
+            width: 150px;
+            height: 150px;
+            background-color: white;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            border:dotted 5px #efe825;
+        }
+
+        /* Gaya untuk input field */
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 60%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            
+        }
+
+        /* Gaya untuk tombol */
+        button {
+            background-color: gray;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Gaya untuk hasil */
+        p {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <head>
+            <title>Animasi Teks Bergelombang HTML dan CSS</title>
+            <style>
+                /* Gaya untuk elemen teks */
+                .wave-text {
+                    font-size: 36px;
+                    font-weight: bold;
+                    position: relative;
+                    display: inline-block;
+                    animation: wave 2s ease-in-out infinite;
+                }
+        
+                /* Animasi */
+                @keyframes wave {
+                    0%, 100% {
+                        transform: translateY(0);
+                    }
+                    50% {
+                        transform: translateY(-10px);
+                    }
+                }
+            </style>
+        </head>
+        <body>
+            <span class="wave-text">Kalkulator Luas dan Keliling Persegi</span>
+        </body>
+        </html>
+        <h1></h1>
+        <div class="square"></div>
+        <input type="text" id="sisi" placeholder="Masukkan panjang sisi">
+        <button onclick="calculate()">Hitung</button>
+        <p>Luas: <span id="areaResult"></span> satuan persegi</p>
+        <p>Keliling: <span id="perimeterResult"></span> satuan</p>
+    </div>
+
+    <script>
+        function calculate() {
+            const sisi = parseFloat(document.getElementById("sisi").value);
+
+            if (isNaN(sisi)) {
+                alert("Masukkan panjang sisi yang valid.");
+                return;
+            }
+
+            const area = sisi * sisi;
+            const perimeter = 4 * sisi;
+
+            document.getElementById("areaResult").textContent = area.toFixed();
+            document.getElementById("perimeterResult").textContent = perimeter.toFixed();
+        }
+    </script>
+</body>
+</html>
